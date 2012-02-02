@@ -2,6 +2,7 @@
 -- Type for Binary Search Tree
 data Tree a = Leaf | Node a (Tree a) (Tree a)
 
+-- Calculating the Binary Tree size
 treeSize Leaf = 0
 treeSize (Node a left right) = 1 + treeSize left + treeSize right
 
