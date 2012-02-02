@@ -3,8 +3,9 @@
 data Tree a = Leaf | Node a (Tree a) (Tree a)
 
 -- Calculating the Binary Tree size
-treeSize Leaf = 0
-treeSize (Node a left right) = 1 + treeSize left + treeSize right
+treeSize                        :: Tree a -> Int
+treeSize Leaf                    = 0
+treeSize (Node a left right)     = 1 + treeSize left + treeSize right
 
 
 -- Example
